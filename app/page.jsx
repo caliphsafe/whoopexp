@@ -15,37 +15,36 @@ export default function Home() {
       </nav>
 
       <section className="hero">
-        <div className="heroCopy">
-          <p className="eyebrow">Speculative Collaboration Concept</p>
+  <div className="heroCopy">
+    <p className="eyebrow">Speculative Collaboration Concept</p>
 
-          <h1>
-            Recovery
-            <span>Has Two Sides</span>
-          </h1>
+    <h1>
+      Recovery
+      <span>Has Two Sides</span>
+    </h1>
 
-          <p className="intro">
-            A creative direction case study imagining how WHOOP and Calm could
-            merge physical performance, mental wellness, product design,
-            packaging, digital behavior, and real-world recovery experiences.
-          </p>
+    <p className="intro">
+      A creative direction case study imagining how WHOOP and Calm could merge
+      physical performance, mental wellness, product design, packaging, digital
+      behavior, and real-world recovery experiences.
+    </p>
 
-          <div className="heroActions">
-            <a href="#opportunity">Enter Case Study</a>
+    <div className="heroActions">
+      <a href="#opportunity">Enter Case Study</a>
 
-            <a href="#notes" className="secondary">
-              Director Notes
-            </a>
-          </div>
-        </div>
+      <a href="#notes" className="secondary">
+        Director Notes
+      </a>
+    </div>
+  </div>
 
-        <div className="heroVisual">
-        <img
-          className="heroImage"
-          src="/images/hero/hero-recovery-has-two-sides.jpg"
-          alt="WHOOP x Calm Hero"
-        />
-      </div>
-      </section>
+  <div className="heroImageWrap">
+    <img
+      src="/images/hero/hero-recovery-has-two-sides.jpg"
+      alt="WHOOP x Calm hero campaign concept"
+    />
+  </div>
+</section>
 
       <section id="opportunity" className="section">
         <p className="eyebrow">01 — The Opportunity</p>
