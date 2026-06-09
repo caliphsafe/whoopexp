@@ -38,12 +38,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="heroVisual imageFrame">
-          <img
-            src="/images/hero/hero-recovery-has-two-sides.jpg"
-            alt="WHOOP x Calm Hero"
-          />
-        </div>
+        <div className="heroVisual">
+        <img
+          className="heroImage"
+          src="/images/hero/hero-recovery-has-two-sides.jpg"
+          alt="WHOOP x Calm Hero"
+        />
+      </div>
       </section>
 
       <section id="opportunity" className="section">
