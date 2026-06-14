@@ -1,5 +1,15 @@
 import "./globals.css";
 
+const images = {
+  hero: "/images/hero/hero-recovery-has-two-sides.jpg",
+  packaging: "/images/packaging/packaging-open-system.jpg",
+  collection: "/images/product/product-collection-reveal.jpg",
+  recovery: "/images/product/recovery-band-hero.jpg",
+  sleep: "/images/product/sleep-band-hero.jpg",
+  breath: "/images/product/breath-band-hero.jpg",
+  focus: "/images/product/focus-band-hero.jpg",
+};
+
 export default function Home() {
   return (
     <main>
@@ -7,142 +17,291 @@ export default function Home() {
         <div className="brand">WHOOP × CALM</div>
 
         <div className="navLinks">
-          <a href="#opportunity">Opportunity</a>
-          <a href="#system">System</a>
-          <a href="#experience">Experience</a>
-          <a href="#notes">Notes</a>
+          <a href="#vision">Vision</a>
+          <a href="#product">Product</a>
+          <a href="#packaging">Packaging</a>
+          <a href="#roadmap">Roadmap</a>
         </div>
       </nav>
 
-      <section className="hero">
-  <div className="heroCopy">
-    <p className="eyebrow">Speculative Collaboration Concept</p>
+      <section id="vision" className="hero">
+        <div className="heroCopy">
+          <p className="eyebrow">Speculative Collaboration Pitch</p>
 
-    <h1>
-      Recovery
-      <span>Has Two Sides</span>
-    </h1>
+          <h1>
+            Recovery
+            <span>Has Two Sides</span>
+          </h1>
 
-    <p className="intro">
-      A creative direction case study imagining how WHOOP and Calm could merge
-      physical performance, mental wellness, product design, packaging, digital
-      behavior, and real-world recovery experiences.
-    </p>
+          <p className="intro">
+            A creative direction case study showing how WHOOP and Calm could
+            connect physical performance, mental wellness, product design,
+            packaging, digital behavior, and real-world recovery experiences.
+          </p>
 
-    <div className="heroActions">
-      <a href="#opportunity">Enter Case Study</a>
+          <div className="heroActions">
+            <a href="#thesis">View the Pitch</a>
 
-      <a href="#notes" className="secondary">
-        Director Notes
-      </a>
-    </div>
-  </div>
+            <a href="#notes" className="secondary">
+              Director Notes
+            </a>
+          </div>
+        </div>
 
-  <div className="heroImageWrap">
-    <img
-      src="/images/hero/hero-recovery-has-two-sides.jpg"
-      alt="WHOOP x Calm hero campaign concept"
-    />
-  </div>
-</section>
+        <ImageHero src={images.hero} alt="WHOOP x Calm hero campaign" />
+      </section>
+
+      <DeckSlide
+        id="thesis"
+        number="01"
+        eyebrow="The Thesis"
+        title="WHOOP measures the body. Calm trains the mind."
+        body="The opportunity is not a co-branded accessory. It is a recovery system that treats performance as both physical and mental."
+      />
 
       <section id="opportunity" className="section">
-        <p className="eyebrow">01 — The Opportunity</p>
+        <p className="eyebrow">02 — Why This Collaboration Works</p>
 
-        <h2>WHOOP measures the body. Calm trains the mind.</h2>
+        <h2>Both brands already live inside the recovery moment.</h2>
 
         <div className="grid three">
           <Card
             title="WHOOP"
-            text="Performance data, strain, recovery, sleep, behavior, and measurable readiness."
+            text="Owns strain, sleep, HRV, recovery, readiness, and measurable performance behavior."
           />
 
           <Card
             title="Calm"
-            text="Meditation, breathwork, sleep stories, emotional regulation, and mental wellness."
+            text="Owns meditation, sleep stories, breathwork, emotional regulation, and mental wellness."
           />
 
           <Card
-            title="The Space Between"
-            text="A complete recovery system where physical readiness and mental state work together."
+            title="The Bridge"
+            text="Recovery becomes a complete behavior system: measure the body, train the mind, recover completely."
           />
         </div>
       </section>
 
-      <section id="system" className="section darkPanel">
-        <p className="eyebrow">02 — Collaboration System</p>
+      <section id="territory" className="section darkPanel">
+        <p className="eyebrow">03 — Creative Territory</p>
 
-        <h2>Not just a co-branded band. A full recovery ecosystem.</h2>
+        <h2>Quiet performance. Soft technology. Human recovery.</h2>
 
         <div className="grid two">
           <Feature
             number="01"
-            title="Band Collection"
-            text="Recovery Band, Sleep Band, Breath Band, and Focus Band colorways."
+            title="Measurable"
+            text="The WHOOP side brings precision, biometric intelligence, discipline, and performance credibility."
           />
 
           <Feature
             number="02"
-            title="Packaging Ritual"
-            text="An unboxing experience that feels quiet, intentional, and premium."
+            title="Emotional"
+            text="The Calm side brings softness, breath, sleep, mindfulness, and a more human recovery language."
           />
 
           <Feature
             number="03"
-            title="App Integration"
-            text="WHOOP recovery scores connected to Calm-guided meditation, breathwork, and sleep rituals."
+            title="Material"
+            text="Warm stone, cloud white, mist blue, midnight navy, woven textiles, soft-touch packaging, and refined titanium."
           />
 
           <Feature
             number="04"
-            title="Launch Campaign"
-            text="A complete campaign language built around the line: Recovery Has Two Sides."
+            title="Systemic"
+            text="Every touchpoint should feel connected: product, packaging, app, campaign, launch experience, and retail."
           />
         </div>
       </section>
 
-      <section id="experience" className="section split">
+      <section id="product" className="section imageSection">
         <div>
-          <p className="eyebrow">03 — Design Language</p>
+          <p className="eyebrow">04 — Product System</p>
 
-          <h2>Quiet performance. Soft technology. Human recovery.</h2>
+          <h2>A band collection built around states of recovery.</h2>
 
           <p className="body">
-            The visual system should feel less like a fitness accessory and more
-            like a recovery object: matte materials, stone-inspired colors,
-            low-noise layouts, calm gradients, and tactile packaging.
+            Each band is more than a colorway. It represents a different
+            recovery behavior: restore, sleep, regulate, and focus.
           </p>
         </div>
 
-        <div className="imageWall">
-          <ImageCard
-            src="/images/product/product-collection-reveal.jpg"
-            label="Collection Reveal"
+        <ImageHero src={images.collection} alt="WHOOP x Calm band collection" />
+      </section>
+
+      <ProductSlide
+        number="05"
+        title="Recovery Band"
+        body="The flagship product. Warm sand tones, woven texture, and technical detailing position recovery as grounded, physical, and measurable."
+        src={images.recovery}
+      />
+
+      <ProductSlide
+        number="06"
+        title="Sleep Band"
+        body="A nighttime expression of the system. Midnight navy, moonlit architecture, and stillness communicate sleep as the foundation of readiness."
+        src={images.sleep}
+      />
+
+      <ProductSlide
+        number="07"
+        title="Breath Band"
+        body="The bridge between WHOOP data and Calm behavior. Mist blue, flowing forms, and atmospheric movement express regulation through breath."
+        src={images.breath}
+      />
+
+      <ProductSlide
+        number="08"
+        title="Focus Band"
+        body="The performance expression. Cloud white, cleaner geometry, and focused light create a product language around clarity and flow state."
+        src={images.focus}
+      />
+
+      <section id="packaging" className="section imageSection darkPanel">
+        <div>
+          <p className="eyebrow">09 — Packaging System</p>
+
+          <h2>The unboxing should feel like entering recovery mode.</h2>
+
+          <p className="body">
+            The packaging turns setup into ritual: outer sleeve, sculpted tray,
+            welcome card, recovery guide, and onboarding materials all support
+            one idea.
+          </p>
+        </div>
+
+        <ImageHero src={images.packaging} alt="WHOOP x Calm packaging system" />
+
+        <div className="grid three packagingGrid">
+          <Card
+            title="Outer Box"
+            text="Soft-touch, stone-inspired packaging introduces calm, silence, and premium restraint."
           />
 
-          <ImageCard
-            src="/images/packaging/packaging-open-system.jpg"
-            label="Packaging System"
+          <Card
+            title="Sculpted Tray"
+            text="The band is centered like a recovery object, reinforcing precision and intention."
           />
 
-          <ImageCard
-            src="/images/product/recovery-band-hero.jpg"
-            label="Recovery Band"
+          <Card
+            title="Welcome System"
+            text="Printed materials explain the philosophy: measure the body, train the mind, recover completely."
+          />
+        </div>
+      </section>
+
+      <section id="digital" className="section">
+        <p className="eyebrow">10 — Digital Experience</p>
+
+        <h2>From recovery score to recovery ritual.</h2>
+
+        <div className="grid two">
+          <Feature
+            number="01"
+            title="Morning Recovery"
+            text="WHOOP recovery data recommends a Calm session based on sleep, HRV, and strain."
           />
 
-          <ImageCard
-            src="/images/product/sleep-band-hero.jpg"
-            label="Sleep Band"
+          <Feature
+            number="02"
+            title="Guided Breathwork"
+            text="Stress signals become actionable recovery moments through breathwork sessions."
           />
 
-          <ImageCard
-            src="/images/product/breath-band-hero.jpg"
-            label="Breath Band"
+          <Feature
+            number="03"
+            title="Sleep Wind Down"
+            text="Sleep debt and recovery trends connect directly to Calm sleep stories and evening rituals."
           />
 
-          <ImageCard
-            src="/images/product/focus-band-hero.jpg"
-            label="Focus Band"
+          <Feature
+            number="04"
+            title="Behavior Loop"
+            text="The app experience closes the loop between biometric insight and mental wellness action."
+          />
+        </div>
+      </section>
+
+      <section id="campaign" className="section darkPanel">
+        <p className="eyebrow">11 — Launch Campaign</p>
+
+        <h2>Recovery Has Two Sides.</h2>
+
+        <div className="grid three">
+          <Card
+            title="Campaign Film"
+            text="A visual story moving between body data, breath, sleep, and mental readiness."
+          />
+
+          <Card
+            title="OOH + Social"
+            text="Minimal campaign layouts with large negative space, product imagery, and direct recovery language."
+          />
+
+          <Card
+            title="Seeding Kit"
+            text="A premium influencer and press kit that turns the unboxing into a guided recovery experience."
+          />
+        </div>
+      </section>
+
+      <section id="activation" className="section">
+        <p className="eyebrow">12 — Physical Activation</p>
+
+        <h2>Bring recovery into the real world.</h2>
+
+        <div className="grid three">
+          <Card
+            title="Recovery Pods"
+            text="Architectural spaces for guided breathwork, recovery education, and product trial."
+          />
+
+          <Card
+            title="Performance Events"
+            text="Marathons, training facilities, and wellness festivals become places to demonstrate the system."
+          />
+
+          <Card
+            title="Retail Experience"
+            text="A calm, tactile environment where customers understand the product before they wear it."
+          />
+        </div>
+      </section>
+
+      <section id="roadmap" className="section darkPanel">
+        <p className="eyebrow">13 — Execution Roadmap</p>
+
+        <h2>How this would move across the company.</h2>
+
+        <div className="timeline">
+          <Roadmap
+            phase="01"
+            title="Strategy"
+            text="Define the collaboration thesis, audience overlap, success metrics, product story, and launch goals."
+          />
+
+          <Roadmap
+            phase="02"
+            title="Design"
+            text="Develop product colorways, packaging architecture, digital experience concepts, campaign visuals, and motion language."
+          />
+
+          <Roadmap
+            phase="03"
+            title="Product + App"
+            text="Translate the idea into wearable materials, app integrations, onboarding flows, and Calm content pathways."
+          />
+
+          <Roadmap
+            phase="04"
+            title="Marketing"
+            text="Build launch film, social, PR kit, email, OOH, retail, and creator campaign assets from one creative system."
+          />
+
+          <Roadmap
+            phase="05"
+            title="Experience"
+            text="Extend the collaboration into pop-ups, recovery pods, athlete activations, retail displays, and live demos."
           />
         </div>
       </section>
@@ -150,18 +309,56 @@ export default function Home() {
       <section id="notes" className="section notes">
         <p className="eyebrow dark">Creative Director Notes</p>
 
-        <h2>
-          This collaboration works because it expands what recovery means.
-        </h2>
+        <h2>This project is designed to show the job being done.</h2>
 
         <p>
-          The strongest opportunity is not simply putting two logos on a band.
-          It is building a system where product, packaging, digital experience,
-          campaign language, and physical activations all reinforce one clear
-          idea: recovery is both physical and mental.
+          The goal is not to prove that a collaboration could look beautiful.
+          The goal is to show how a creative director can connect brand
+          strategy, industrial design, packaging, digital product, campaign
+          storytelling, and cross-functional execution into one clear system.
         </p>
       </section>
+
+      <footer className="footer">
+        WHOOP × Calm — Speculative Creative Direction Case Study
+      </footer>
     </main>
+  );
+}
+
+function ImageHero({ src, alt }) {
+  return (
+    <div className="heroImageWrap">
+      <img src={src} alt={alt} />
+    </div>
+  );
+}
+
+function ProductSlide({ number, title, body, src }) {
+  return (
+    <section className="section productSlide">
+      <div>
+        <p className="eyebrow">{number} — Product Detail</p>
+        <h2>{title}</h2>
+        <p className="body">{body}</p>
+      </div>
+
+      <ImageHero src={src} alt={title} />
+    </section>
+  );
+}
+
+function DeckSlide({ id, number, eyebrow, title, body }) {
+  return (
+    <section id={id} className="section deckSlide">
+      <p className="eyebrow">
+        {number} — {eyebrow}
+      </p>
+
+      <h2>{title}</h2>
+
+      <p className="deckBody">{body}</p>
+    </section>
   );
 }
 
@@ -184,11 +381,15 @@ function Feature({ number, title, text }) {
   );
 }
 
-function ImageCard({ src, label }) {
+function Roadmap({ phase, title, text }) {
   return (
-    <div className="imageCard">
-      <img src={src} alt={label} />
-      <span>{label}</span>
+    <div className="roadmapItem">
+      <span>{phase}</span>
+
+      <div>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </div>
     </div>
   );
 }
