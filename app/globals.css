@@ -121,17 +121,26 @@ img {
 }
 
 .heroImage,
-.wideImage {
-  max-width: 1320px;
-  margin: 64px auto 0;
+.wideImage,
+.thesisVisual,
+.strategyImage {
   overflow: hidden;
   border-radius: 42px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 50px 150px rgba(0, 0, 0, 0.6);
 }
 
+.heroImage,
+.wideImage,
+.thesisVisual {
+  max-width: 1320px;
+  margin: 64px auto 0;
+}
+
 .heroImage img,
-.wideImage img {
+.wideImage img,
+.thesisVisual img,
+.strategyImage img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -166,7 +175,6 @@ img {
     #080d13;
 }
 
-.statementSlide h2,
 .pitchSlide h2 {
   max-width: 1180px;
   margin: 20px 0 34px;
@@ -175,13 +183,29 @@ img {
   letter-spacing: -0.075em;
 }
 
-.statementSlide p:last-child,
-.pitchSlide > .body,
-.deckBody {
+.lineBreak {
+  display: block;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.deckBody,
+.strategyCopy p,
+.pitchSlide > .body {
   max-width: 850px;
   color: rgba(255, 255, 255, 0.62);
   font-size: 22px;
   line-height: 1.65;
+}
+
+.body {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.body.narrow {
+  max-width: 760px;
 }
 
 .slideNumber {
@@ -204,81 +228,33 @@ img {
   font-size: 72px;
 }
 
-.splitDeck {
+.strategyImageSlide {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 42px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 44px;
   align-items: center;
 }
 
-.body {
-  max-width: 700px;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 19px;
-  line-height: 1.75;
+.strategyImageSlide.reverse {
+  grid-template-columns: 1.15fr 0.85fr;
 }
 
-.body.narrow {
-  max-width: 760px;
+.strategyImageSlide.reverse .strategyCopy {
+  order: 2;
 }
 
-.insightGrid,
-.grid,
-.packagingBreakdown,
-.teamGrid {
-  display: grid;
-  gap: 18px;
+.strategyImageSlide.reverse .strategyImage {
+  order: 1;
 }
 
-.insightGrid {
-  grid-template-columns: repeat(2, 1fr);
+.strategyCopy {
+  position: relative;
+  z-index: 2;
 }
 
-.grid.three {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid.two {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.insightCard,
-.largeCard,
-.journeyStep,
-.experienceCard,
-.teamCard,
-.roadmapItem {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
-  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.25);
-}
-
-.insightCard {
-  min-height: 220px;
-  padding: 28px;
-}
-
-.insightCard h3,
-.largeCard h3,
-.journeyStep h3,
-.experienceCard h3,
-.teamCard h3,
-.roadmapItem h3 {
-  margin: 0;
-  font-size: 30px;
-  letter-spacing: -0.05em;
-}
-
-.insightCard p,
-.largeCard p,
-.journeyStep p,
-.experienceCard p,
-.teamCard p,
-.roadmapItem p {
-  color: rgba(255, 255, 255, 0.58);
-  line-height: 1.7;
-  font-size: 17px;
+.strategyImage {
+  position: relative;
+  z-index: 2;
 }
 
 .brandMatrix {
@@ -332,39 +308,59 @@ img {
   text-align: center;
 }
 
-.twoColumnCards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 46px;
-}
-
-.largeCard {
-  min-height: 360px;
-  padding: 34px;
-}
-
-.largeCard span {
-  color: #7dd3fc;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.largeCard h3 {
-  margin-top: 90px;
-  font-size: 52px;
-}
-
-.largeCard.soft {
-  background:
-    radial-gradient(circle at 80% 20%, rgba(125, 211, 252, 0.15), transparent 40%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
-}
-
 .imageLedSlide {
   justify-content: flex-start;
+}
+
+.grid,
+.packagingBreakdown,
+.teamGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.insightCard,
+.journeyStep,
+.experienceCard,
+.teamCard,
+.roadmapItem {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.25);
+}
+
+.insightCard {
+  min-height: 220px;
+  padding: 28px;
+}
+
+.insightCard h3,
+.journeyStep h3,
+.experienceCard h3,
+.teamCard h3,
+.roadmapItem h3 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -0.05em;
+}
+
+.insightCard p,
+.journeyStep p,
+.experienceCard p,
+.teamCard p,
+.roadmapItem p {
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.7;
+  font-size: 17px;
 }
 
 .productStory {
@@ -441,17 +437,26 @@ img {
 }
 
 .journeyStep {
-  min-height: 330px;
+  min-height: 360px;
   padding: 28px;
 }
 
 .journeyStep span {
   display: block;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
   color: #7dd3fc;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.22em;
+}
+
+.journeyStep strong {
+  display: block;
+  margin: 14px 0 18px;
+  color: #f8fafc;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .campaignLine {
@@ -541,18 +546,22 @@ img {
     display: none;
   }
 
-  .splitDeck,
+  .strategyImageSlide,
+  .strategyImageSlide.reverse,
   .brandMatrix,
-  .twoColumnCards,
   .productPanel,
   .grid.three,
   .grid.two,
-  .insightGrid,
   .packagingBreakdown,
   .journeyGrid,
   .activationCards,
   .teamGrid {
     grid-template-columns: 1fr;
+  }
+
+  .strategyImageSlide.reverse .strategyCopy,
+  .strategyImageSlide.reverse .strategyImage {
+    order: initial;
   }
 
   .pitchSlide,
@@ -571,6 +580,8 @@ img {
 
   .heroImage,
   .wideImage,
+  .thesisVisual,
+  .strategyImage,
   .productImage {
     margin-top: 42px;
     border-radius: 28px;
