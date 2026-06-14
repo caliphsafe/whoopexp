@@ -14,6 +14,10 @@ const images = {
   sleep: "/images/product/sleep-band-hero.jpg",
   breath: "/images/product/breath-band-hero.jpg",
   focus: "/images/product/focus-band-hero.jpg",
+  digitalOverview: "/images/digital/digital-ecosystem-overview.jpg",
+morningRecoveryFlow: "/images/digital/morning-recovery-flow.jpg",
+stressBreathworkFlow: "/images/digital/stress-to-breathwork-flow.jpg",
+sleepWindDownFlow: "/images/digital/sleep-wind-down-flow.jpg"
 };
 
 const productBands = [
@@ -373,27 +377,66 @@ export default function Home() {
     />
   </div>
 </section>
-      <section id="digital" className="pitchSlide">
-        <span className="slideNumber">14</span>
-        <p className="eyebrow">Digital Experience</p>
+      <section id="digital" className="pitchSlide imageLedSlide">
+  <span className="slideNumber">14</span>
+  <p className="eyebrow">Digital Experience</p>
 
-        <h2>Turn biometric insight into guided recovery action.</h2>
+  <h2>Turn biometric insight into guided recovery action.</h2>
 
-        <div className="journeyGrid">
-          {digitalMoments.map((moment, index) => (
-            <JourneyStep
-              key={moment.signal}
-              number={String(index + 1).padStart(2, "0")}
-              title={moment.signal}
-              action={moment.action}
-              text={moment.detail}
-            />
-          ))}
-        </div>
-      </section>
+  <p className="body narrow">
+    The app experience is where the collaboration becomes useful. WHOOP
+    identifies the state. Calm provides the next best recovery behavior.
+  </p>
 
+  <div className="wideImage">
+    <img
+      src={images.digitalOverview}
+      alt="WHOOP x Calm digital ecosystem overview"
+    />
+  </div>
+
+  <div className="journeyGrid">
+    {digitalMoments.map((moment, index) => (
+      <JourneyStep
+        key={moment.signal}
+        number={String(index + 1).padStart(2, "0")}
+        title={moment.signal}
+        action={moment.action}
+        text={moment.detail}
+      />
+    ))}
+  </div>
+        
+</section>
+<DigitalFlowSlide
+  number="14"
+  eyebrow="User Flow"
+  title="Morning recovery becomes a guided ritual."
+  body="The member wakes up, sees their recovery state, receives a Calm recommendation, completes the session, and returns to WHOOP with a clearer understanding of how behavior affects readiness."
+  image={images.morningRecoveryFlow}
+  alt="Morning recovery digital flow"
+/>
+
+<DigitalFlowSlide
+  number="16"
+  eyebrow="User Flow"
+  title="Stress signals become breathwork."
+  body="Instead of simply showing elevated stress, the product creates an immediate recovery action: detect the signal, recommend the breathwork, complete the session, and close the loop."
+  image={images.stressBreathworkFlow}
+  alt="Stress to breathwork digital flow"
+  reverse
+/>
+
+<DigitalFlowSlide
+  number="17"
+  eyebrow="User Flow"
+  title="Sleep data becomes a wind-down experience."
+  body="Sleep insight becomes an evening ritual. The member is guided from sleep debt and recovery trends into a Calm wind-down session and next-day reflection."
+  image={images.sleepWindDownFlow}
+  alt="Sleep wind down digital flow"
+/>
       <section className="pitchSlide darkSlide">
-        <span className="slideNumber">15</span>
+        <span className="slideNumber">18</span>
         <p className="eyebrow">Marketing System</p>
 
         <h2>A campaign built from one sentence.</h2>
@@ -434,7 +477,7 @@ export default function Home() {
       </section>
 
       <section className="pitchSlide">
-        <span className="slideNumber">16</span>
+        <span className="slideNumber">19</span>
         <p className="eyebrow">Physical Activation</p>
 
         <h2>Make recovery something people can enter.</h2>
@@ -463,7 +506,7 @@ export default function Home() {
       </section>
 
       <section id="execution" className="pitchSlide darkSlide">
-        <span className="slideNumber">17</span>
+        <span className="slideNumber">20</span>
         <p className="eyebrow">Cross-Functional Execution</p>
 
         <h2>How I would align the company around the idea.</h2>
@@ -476,7 +519,7 @@ export default function Home() {
       </section>
 
       <section className="pitchSlide roadmapSlide">
-        <span className="slideNumber">18</span>
+        <span className="slideNumber">21</span>
         <p className="eyebrow">Launch Roadmap</p>
 
         <h2>From idea to launch system.</h2>
@@ -609,7 +652,23 @@ function Team({ title, text }) {
     </div>
   );
 }
+function DigitalFlowSlide({ number, eyebrow, title, body, image, alt, reverse = false }) {
+  return (
+    <section className={`pitchSlide strategyImageSlide ${reverse ? "reverse" : ""}`}>
+      <span className="slideNumber">{number}</span>
 
+      <div className="strategyCopy">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p>{body}</p>
+      </div>
+
+      <div className="strategyImage">
+        <img src={image} alt={alt} />
+      </div>
+    </section>
+  );
+}
 function Roadmap({ phase, title, text }) {
   return (
     <div className="roadmapItem">
