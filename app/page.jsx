@@ -8,6 +8,7 @@ const images = {
   calmPosition: "/images/strategy/calm-guides-the-response.jpg",
   thesis: "/images/strategy/measured-and-guided.jpg",
   packaging: "/images/packaging/packaging-open-system.jpg",
+  packagingTechSheet: "/images/packaging/packaging-production-tech-sheet.jpg",
   collection: "/images/product/product-collection-reveal.jpg",
   recovery: "/images/product/recovery-band-hero.jpg",
   sleep: "/images/product/sleep-band-hero.jpg",
@@ -330,9 +331,50 @@ export default function Home() {
           />
         </div>
       </section>
+<section className="pitchSlide imageLedSlide">
+  <span className="slideNumber">13</span>
+  <p className="eyebrow">Packaging Production Handoff</p>
 
+  <h2>From visual concept to manufacturable system.</h2>
+
+  <p className="body narrow">
+    The packaging direction needs to translate into real production decisions:
+    structure, materials, dielines, tray logic, print finishes, insert hierarchy,
+    sustainability, and the handoff between creative, industrial design,
+    packaging, and manufacturing.
+  </p>
+
+  <div className="wideImage">
+    <img
+      src={images.packagingTechSheet}
+      alt="WHOOP x Calm packaging production tech sheet"
+    />
+  </div>
+
+  <div className="packagingBreakdown">
+    <Insight
+      title="Structure"
+      text="Rigid box, sleeve, molded tray, and insert system are planned as separate production components."
+    />
+
+    <Insight
+      title="Materials"
+      text="Soft-touch paper, molded pulp, woven textile, and refined metallic details keep the system premium and tactile."
+    />
+
+    <Insight
+      title="Finish"
+      text="Embossing, debossing, matte coatings, and restrained color use create a quiet luxury experience."
+    />
+
+    <Insight
+      title="Handoff"
+      text="The tech sheet gives packaging, product, vendors, and leadership a clear shared production reference."
+    />
+  </div>
+</section>
       <section id="digital" className="pitchSlide">
-        <span className="slideNumber">13</span>
+        <span className="slideNumber">14</span>
         <p className="eyebrow">Digital Experience</p>
 
         <h2>Turn biometric insight into guided recovery action.</h2>
@@ -351,7 +393,7 @@ export default function Home() {
       </section>
 
       <section className="pitchSlide darkSlide">
-        <span className="slideNumber">14</span>
+        <span className="slideNumber">15</span>
         <p className="eyebrow">Marketing System</p>
 
         <h2>A campaign built from one sentence.</h2>
@@ -392,7 +434,7 @@ export default function Home() {
       </section>
 
       <section className="pitchSlide">
-        <span className="slideNumber">15</span>
+        <span className="slideNumber">16</span>
         <p className="eyebrow">Physical Activation</p>
 
         <h2>Make recovery something people can enter.</h2>
@@ -421,7 +463,7 @@ export default function Home() {
       </section>
 
       <section id="execution" className="pitchSlide darkSlide">
-        <span className="slideNumber">16</span>
+        <span className="slideNumber">17</span>
         <p className="eyebrow">Cross-Functional Execution</p>
 
         <h2>How I would align the company around the idea.</h2>
@@ -434,7 +476,7 @@ export default function Home() {
       </section>
 
       <section className="pitchSlide roadmapSlide">
-        <span className="slideNumber">17</span>
+        <span className="slideNumber">18</span>
         <p className="eyebrow">Launch Roadmap</p>
 
         <h2>From idea to launch system.</h2>
