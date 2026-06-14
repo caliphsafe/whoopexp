@@ -17,7 +17,8 @@ const images = {
   digitalOverview: "/images/digital/digital-ecosystem-overview.jpg",
 morningRecoveryFlow: "/images/digital/morning-recovery-flow.jpg",
 stressBreathworkFlow: "/images/digital/stress-to-breathwork-flow.jpg",
-sleepWindDownFlow: "/images/digital/sleep-wind-down-flow.jpg"
+sleepWindDownFlow: "/images/digital/sleep-wind-down-flow.jpg",
+marketingSystem: "/images/marketing/marketing-system-asset-suite.png"
 };
 
 const productBands = [
@@ -435,46 +436,58 @@ export default function Home() {
   image={images.sleepWindDownFlow}
   alt="Sleep wind down digital flow"
 />
-      <section className="pitchSlide darkSlide">
-        <span className="slideNumber">18</span>
-        <p className="eyebrow">Marketing System</p>
+      <section className="pitchSlide imageLedSlide darkSlide">
+  <span className="slideNumber">18</span>
+  <p className="eyebrow">Marketing System</p>
 
-        <h2>A campaign built from one sentence.</h2>
+  <h2>A campaign built from one sentence.</h2>
 
-        <div className="campaignLine">Recovery Has Two Sides</div>
+  <p className="body narrow">
+    The campaign system turns one idea into coordinated assets across film,
+    out-of-home, social, email, app surfaces, PR, creators, and retail.
+  </p>
 
-        <div className="grid three">
-          <Insight
-            title="Hero Film"
-            text="Body signals and mental rituals moving in parallel."
-          />
+  <div className="campaignLine">Recovery Has Two Sides</div>
 
-          <Insight
-            title="OOH"
-            text="Large negative space, product hero imagery, direct copy, and premium restraint."
-          />
+  <div className="wideImage">
+    <img
+      src={images.marketingSystem}
+      alt="WHOOP x Calm marketing asset system"
+    />
+  </div>
 
-          <Insight
-            title="Social Assets"
-            text="Short-form visuals showing different recovery states across the band collection."
-          />
+  <div className="grid three">
+    <Insight
+      title="Hero Film"
+      text="Body signals and mental rituals moving in parallel."
+    />
 
-          <Insight
-            title="Email + App"
-            text="Launch flows that explain the value of the system, not just the product."
-          />
+    <Insight
+      title="OOH"
+      text="Large negative space, product hero imagery, direct copy, and premium restraint."
+    />
 
-          <Insight
-            title="Press Kit"
-            text="A premium seeding experience for creators, athletes, wellness voices, and media."
-          />
+    <Insight
+      title="Social Assets"
+      text="Short-form visuals showing different recovery states across the band collection."
+    />
 
-          <Insight
-            title="Retail Graphics"
-            text="Material, packaging, and app story translated into physical sales environments."
-          />
-        </div>
-      </section>
+    <Insight
+      title="Email + App"
+      text="Launch flows that explain the value of the system, not just the product."
+    />
+
+    <Insight
+      title="Press Kit"
+      text="A premium seeding experience for creators, athletes, wellness voices, and media."
+    />
+
+    <Insight
+      title="Retail Graphics"
+      text="Material, packaging, and app story translated into physical sales environments."
+    />
+  </div>
+</section>
 
       <section className="pitchSlide">
         <span className="slideNumber">19</span>
