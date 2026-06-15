@@ -18,7 +18,7 @@ const images = {
 morningRecoveryFlow: "/images/digital/morning-recovery-flow.jpg",
 stressBreathworkFlow: "/images/digital/stress-to-breathwork-flow.jpg",
 sleepWindDownFlow: "/images/digital/sleep-wind-down-flow.jpg",
-marketingSystem: "/images/marketing/marketing-system-asset-suite.png"
+marketingSystem: "/images/marketing/marketing-system-asset-suite.jpg"
 };
 
 const productBands = [
