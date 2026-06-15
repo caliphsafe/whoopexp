@@ -18,7 +18,8 @@ const images = {
 morningRecoveryFlow: "/images/digital/morning-recovery-flow.jpg",
 stressBreathworkFlow: "/images/digital/stress-to-breathwork-flow.jpg",
 sleepWindDownFlow: "/images/digital/sleep-wind-down-flow.jpg",
-marketingSystem: "/images/marketing/marketing-system-asset-suite.jpg"
+marketingSystem: "/images/marketing/marketing-system-asset-suite.jpg",
+activationMoodboard: "/images/activation/physical-activation-moodboard.jpg",
 };
 
 const productBands = [
@@ -489,34 +490,47 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="pitchSlide">
-        <span className="slideNumber">19</span>
-        <p className="eyebrow">Physical Activation</p>
+      <section className="pitchSlide imageLedSlide">
+  <span className="slideNumber">19</span>
+  <p className="eyebrow">Physical Activation</p>
 
-        <h2>Make recovery something people can enter.</h2>
+  <h2>Make recovery something people can enter.</h2>
 
-        <div className="activationCards">
-          <ExperienceCard
-            title="Recovery Pods"
-            text="Architectural mini spaces for guided breathwork, product trial, and recovery education."
-          />
+  <p className="body narrow">
+    The collaboration should move beyond digital and product. Physical
+    activations give members, athletes, creators, and retail visitors a way to
+    feel the system in real life.
+  </p>
 
-          <ExperienceCard
-            title="Marathon Recovery Lounge"
-            text="Post-race space where WHOOP data informs guided Calm sessions."
-          />
+  <div className="wideImage">
+    <img
+      src={images.activationMoodboard}
+      alt="WHOOP x Calm physical activation strategy moodboard"
+    />
+  </div>
 
-          <ExperienceCard
-            title="Airport Reset Room"
-            text="A travel recovery environment built around breath, sleep, and nervous system reset."
-          />
+  <div className="activationCards">
+    <ExperienceCard
+      title="Recovery Pods"
+      text="Architectural mini spaces for guided breathwork, product trial, and recovery education."
+    />
 
-          <ExperienceCard
-            title="Retail Recovery Lab"
-            text="A premium store installation showing the product, packaging, app, and behavior loop together."
-          />
-        </div>
-      </section>
+    <ExperienceCard
+      title="Marathon Recovery Lounge"
+      text="Post-race space where WHOOP data informs guided Calm sessions."
+    />
+
+    <ExperienceCard
+      title="Airport Reset Room"
+      text="A travel recovery environment built around breath, sleep, and nervous system reset."
+    />
+
+    <ExperienceCard
+      title="Retail Recovery Lab"
+      text="A premium store installation showing the product, packaging, app, and behavior loop together."
+    />
+  </div>
+</section>
 
       <section id="execution" className="pitchSlide darkSlide">
         <span className="slideNumber">20</span>
